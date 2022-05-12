@@ -1,5 +1,6 @@
 #include "Hotel.h"
 #include "Edit_Records.h"
+#include "Display_Room_Records.h"
 
 #include <iostream>
 #include <vector>

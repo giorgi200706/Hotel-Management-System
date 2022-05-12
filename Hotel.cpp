@@ -1,5 +1,7 @@
 #include "Hotel.h"
 #include "Edit_Records.h"
+#include "Display_Room_Records.h"
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -29,20 +31,21 @@ int Hotel::Hotel_printmenu(){
 			}
 		}
 	}
-	cout<<endl<<"==========================="<<endl<<endl;
 	
 	// add class subjects
 	Edit_Records er;
+	Display_Room_Records drr;
 	
 	if(num_return == 1){
 		er.Edit_Records_printmenu();
 	}else if(num_return == 2){
-		
+		drr.Display_Room_Records_main_function();
 	}else if(num_return == 3){
 		
 	}else if(num_return == 4){
 		return 0;
 	}
+	cout<<endl<<"==========================="<<endl<<endl;
 	
 }
 
