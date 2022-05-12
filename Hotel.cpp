@@ -1,4 +1,5 @@
 #include "Hotel.h"
+#include "Edit_Records.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -28,7 +29,21 @@ int Hotel::Hotel_printmenu(){
 			}
 		}
 	}
-	return num_return;
+	cout<<endl<<"==========================="<<endl<<endl;
+	
+	// add class subjects
+	Edit_Records er;
+	
+	if(num_return == 1){
+		er.Edit_Records_printmenu();
+	}else if(num_return == 2){
+		
+	}else if(num_return == 3){
+		
+	}else if(num_return == 4){
+		return 0;
+	}
+	
 }
 
 Hotel::~Hotel(){}
