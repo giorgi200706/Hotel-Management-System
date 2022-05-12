@@ -9,11 +9,14 @@ Hotel::Hotel(){
 	
 }
 int Hotel::Hotel_printmenu(){
+	// print the menu
 	cout<<"1. EDIT RECORDS"<<endl
 		<<"2. DISPLAY ROOM RECORDS"<<endl
 		<<"3. DISPLAY CUSTOMER RECORDS"<<endl
 		<<"4. EXIT TO DOS"<<endl<<endl<<endl
 		<<"ENTER YOUR CHOISE : ";
+		
+	// Enter number and verify
 	cin>>num_return;
 	if(num_return<1 || num_return>4){
 		for(int i=0; i<1; i=i){
