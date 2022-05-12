@@ -11,6 +11,7 @@ using namespace std;
 class Display_Room_Records : public Hotel{
 	protected:
 		int Display_Room_Records_num;
+		string more_records;
 		
 	public:
 		Display_Room_Records();

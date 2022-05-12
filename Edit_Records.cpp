@@ -7,7 +7,7 @@
 using namespace std;
 
 Edit_Records::Edit_Records(){
-	
+	Edit_Records_num_return = 0;
 }
 
 int Edit_Records::Edit_Records_printmenu(){

@@ -4,8 +4,8 @@
 CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = main.o Hotel.o Edit_Records.o Display_Room_Records.o
-LINKOBJ  = main.o Hotel.o Edit_Records.o Display_Room_Records.o
+OBJ      = main.o Hotel.o Edit_Records.o Display_Room_Records.o Display_Customer_Records.o
+LINKOBJ  = main.o Hotel.o Edit_Records.o Display_Room_Records.o Display_Customer_Records.o
 LIBS     = -L"C:/Users/User/Downloads/old/Dev-Cpp/MinGW64/lib" -L"C:/Users/User/Downloads/old/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
 INCS     = -I"C:/Users/User/Downloads/old/Dev-Cpp/MinGW64/include" -I"C:/Users/User/Downloads/old/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/User/Downloads/old/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Users/User/Downloads/old/Dev-Cpp/MinGW64/include" -I"C:/Users/User/Downloads/old/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/User/Downloads/old/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/User/Downloads/old/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -35,3 +35,6 @@ Edit_Records.o: Edit_Records.cpp
 
 Display_Room_Records.o: Display_Room_Records.cpp
 	$(CPP) -c Display_Room_Records.cpp -o Display_Room_Records.o $(CXXFLAGS)
+
+Display_Customer_Records.o: Display_Customer_Records.cpp
+	$(CPP) -c Display_Customer_Records.cpp -o Display_Customer_Records.o $(CXXFLAGS)
