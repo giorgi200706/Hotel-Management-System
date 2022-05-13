@@ -1,6 +1,8 @@
 #include "Edit_Records.h"
 #include "Hotel.h"
 #include "Edit_Room.h"
+#include "Edit_Customer.h"
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -12,12 +14,18 @@ Edit_Records::Edit_Records(){
 }
 
 int Edit_Records::Edit_Records_printmenu(){
+	
+	// add class subjects
+	Hotel h;
+	Edit_Room er;
+	Edit_Customer ec;
+	
 	// print the menu
-	cout<<"        EDIT"<<endl
-		<<"1. ROOM RECORDS"<<endl
-		<<"2. CUSTOMER RECORDS"<<endl
-		<<"3. BACK"<<endl<<endl
-		<<"ENTER YOUR CHOISE : ";
+	cout<<h.center("EDIT")<<endl<<endl
+		<<h.center("1. ROOM RECORDS")<<endl
+		<<h.center("2. CUSTOMER RECORDS")<<endl
+		<<h.center("3. BACK")<<endl<<endl
+		<<h.center(" ENTER YOUR CHOISE : ");
 		
 	// Enter number and verify
 	cin>>Edit_Records_num_return;
@@ -31,21 +39,16 @@ int Edit_Records::Edit_Records_printmenu(){
 			}
 		}
 	}
-	cout<<endl<<"==========================="<<endl<<endl;
-	
-	// add class subjects
-	Hotel h;
-	Edit_Room er;
+	cout<<endl<<h.center("======================================")<<endl<<endl;
 	
 	
 	if(Edit_Records_num_return == 1){
 		er.Edit_Room_printmenu();
 	}else if(Edit_Records_num_return == 2){
-		
+		ec.Edit_Customer_printmenu();
 	}else if(Edit_Records_num_return == 3){
 		h.Hotel_printmenu();
 	}
-	
 	
 }
 

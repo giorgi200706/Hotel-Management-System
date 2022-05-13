@@ -12,20 +12,26 @@ using namespace std;
 Hotel::Hotel(){
 	num_return = 0;
 }
+string Hotel::center(string input) { 
+    return string((113 - input.length()) / 2, ' ') + input;
+}
+string Hotel::print100(string input) { 
+    return string(49, ' ') + input;
+}
 int Hotel::Hotel_printmenu(){
 	// print the menu
-	cout<<"1. EDIT RECORDS"<<endl
-		<<"2. DISPLAY ROOM RECORDS"<<endl
-		<<"3. DISPLAY CUSTOMER RECORDS"<<endl
-		<<"4. EXIT TO DOS"<<endl<<endl<<endl
-		<<"ENTER YOUR CHOISE : ";
+	cout<<center("1. EDIT RECORDS")<<endl
+		<<center("2. DISPLAY ROOM RECORDS")<<endl
+		<<center("3. DISPLAY CUSTOMER RECORDS")<<endl
+		<<center("4. EXIT TO DOS")<<endl<<endl<<endl
+		<<center("ENTER YOUR CHOISE : ");
 		
 	// Enter number and verify
 	cin>>num_return;
 	if(num_return<1 || num_return>4){
 		for(int i=0; i<1; i=i){
-			cout<<"The number entered must be one of these numbers 1,2,3,4"<<endl
-				<<"ENTER YOUR CHOISE : ";
+			cout<<center("The number entered must be one of these numbers 1,2,3,4")<<endl
+				<<center("ENTER YOUR CHOISE : ");
 			cin>>num_return;
 			if(num_return>=1 && num_return<=4){
 				i = 1;
@@ -38,7 +44,7 @@ int Hotel::Hotel_printmenu(){
 	Display_Room_Records drr;
 	Display_Customer_Records dcr;
 	
-	cout<<endl<<"==========================="<<endl<<endl;
+	cout<<endl<<center("======================================")<<endl<<endl;
 	if(num_return == 1){
 		er.Edit_Records_printmenu();
 	}else if(num_return == 2){

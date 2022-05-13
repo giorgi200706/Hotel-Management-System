@@ -14,6 +14,8 @@ class Hotel{
 	public:
 		Hotel();
 		int Hotel_printmenu();
+		string center(string);
+		string print100(string);
 		~Hotel();
 };
 

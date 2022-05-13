@@ -13,20 +13,24 @@ Edit_Room::Edit_Room(){
 }
 int Edit_Room::Edit_Room_printmenu(){
 	
+	// add class subjects
+	Hotel h;
+	Edit_Records er;
+	
 	// print the menu
-	cout<<"         EDIT"<<endl<<endl
-		<<"1. ADD ROOM RECORDS"<<endl
-		<<"2. MODIFY ROOM RECORDS"<<endl
-		<<"3. DELETE ROOM RECORDS"<<endl
-		<<"4. BACK"<<endl<<endl<<endl
-		<<"ENTER YOUR CHOISE : ";
+	cout<<h.center("EDIT")<<endl<<endl
+		<<h.center("1. ADD ROOM RECORDS")<<endl
+		<<h.center("2. MODIFY ROOM RECORDS")<<endl
+		<<h.center("3. DELETE ROOM RECORDS")<<endl
+		<<h.center("4. BACK")<<endl<<endl<<endl
+		<<h.center("ENTER YOUR CHOISE : ");
 		
 	// Enter number and verify
 	cin>>Edit_Room_num_return;
 	if(Edit_Room_num_return<1 || Edit_Room_num_return>4){
 		for(int i=0; i<1; i=i){
-			cout<<"The number entered must be one of these numbers 1,2,3,4"<<endl
-				<<"ENTER YOUR CHOISE : ";
+			cout<<h.center("The number entered must be one of these numbers 1,2,3,4")<<endl
+				<<h.center("ENTER YOUR CHOISE : ");
 			cin>>Edit_Room_num_return;
 			if(Edit_Room_num_return>=1 && Edit_Room_num_return<=4){
 				i = 1;
@@ -34,11 +38,8 @@ int Edit_Room::Edit_Room_printmenu(){
 		}
 	}
 	
-	// add class subjects
-	Hotel h;
-	Edit_Records er;
 	
-	cout<<endl<<"==========================="<<endl<<endl;
+	cout<<endl<<h.center("======================================")<<endl<<endl;
 	if(Edit_Room_num_return == 1){
 		
 	}else if(Edit_Room_num_return == 2){
@@ -50,6 +51,4 @@ int Edit_Room::Edit_Room_printmenu(){
 	}
 }
 
-Edit_Room::~Edit_Room()
-{
-}
+Edit_Room::~Edit_Room(){}
