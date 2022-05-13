@@ -1,5 +1,6 @@
 #include "Edit_Records.h"
 #include "Hotel.h"
+#include "Edit_Room.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -34,10 +35,11 @@ int Edit_Records::Edit_Records_printmenu(){
 	
 	// add class subjects
 	Hotel h;
+	Edit_Room er;
 	
 	
 	if(Edit_Records_num_return == 1){
-		
+		er.Edit_Room_printmenu();
 	}else if(Edit_Records_num_return == 2){
 		
 	}else if(Edit_Records_num_return == 3){
