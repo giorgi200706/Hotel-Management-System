@@ -48,7 +48,7 @@ int Edit_Customer::Edit_Customer_printmenu(){
 		Edit_Customer_Delete();
 	}else if(Edit_Customer_num_return == 4){
 		er.Edit_Records_printmenu();
-	}
+	} 
 }
 
 int Edit_Customer::Edit_Customer_Add_Customer_Records(){
